@@ -3,7 +3,7 @@ from typing import Callable, Any, Union
 
 class Ability:
     """
-    Класс, представляющий способность (умение) персонажа или босса.
+    Класс, представляющий способность (умение) персонажа или босса
     Атрибуты:
         nameAbility: Название способности
         effect: Функция, реализующая эффект способности
@@ -15,7 +15,7 @@ class Ability:
 
 class Abilities:
     """
-    Контейнер для хранения способностей, разделённых по типам персонажей и боссов.
+    Контейнер для хранения способностей, разделённых по типам персонажей и боссов
     Атрибуты:
         warriorAbilities (dict[str, Ability]) = {} - способности воина
         archerAbilities (dict[str, Ability]) = {} - способности лучника
@@ -62,7 +62,7 @@ allAbilities: dict[str, Ability] = {
 # Экземпляр контейнера способностей
 abilities = Abilities()
 
-# Назначение способностей конкретным ролям:
+# Назначение способностей конкретным ролям
 abilities.addHealerAbility(allAbilities['meditation'])
 abilities.addMageAbility(allAbilities["meditation"])
 abilities.addBossAbility(allAbilities["massAtack"])     

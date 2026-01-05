@@ -9,7 +9,7 @@ def auth() -> None:
     соответствующую функцию из модуля registration
     """
     # Запрос у пользователя, существует ли у него аккаунт
-    checkAcc: str = input("У вас есть аккаунт? Да/Нет\n")
+    checkAcc = input("У вас есть аккаунт? Да/Нет\n")
     
     # Валидация ввода
     while checkAcc != "Да" and checkAcc != "Нет":
@@ -17,8 +17,8 @@ def auth() -> None:
     
     if checkAcc == 'Да':
         # Вход в существующий аккаунт
-        playerlogin: str = input("Введите логин\n")
-        playerpassword: str = input("Введите пароль\n")
+        playerlogin = input("Введите логин\n")
+        playerpassword = input("Введите пароль\n")
         print("Загружаем данные")
         time.sleep(1)  # Эмуляция загрузки, чтобы выглядело лучше и не всплывало окно сразу
         login(playerlogin, playerpassword)

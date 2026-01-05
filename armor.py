@@ -1,6 +1,3 @@
-from typing import Dict
-
-
 class Armor:
     """
     Класс, представляющий доспех
@@ -24,11 +21,11 @@ class Armors:
         boss (Dict[str, Armor]): Доспехи для босса
     """
     def __init__(self) -> None:
-        self.warrior: Dict[str, Armor] = {}
-        self.archer: Dict[str, Armor] = {}
-        self.mage: Dict[str, Armor] = {}
-        self.healer: Dict[str, Armor] = {}
-        self.boss: Dict[str, Armor] = {}
+        self.warrior: dict[str, Armor] = {}
+        self.archer: dict[str, Armor] = {}
+        self.mage: dict[str, Armor] = {}
+        self.healer: dict[str, Armor] = {}
+        self.boss: dict[str, Armor] = {}
 
     def addWarriorArmor(self, armor: Armor) -> None:
         # Добавляет доспех в коллекцию доспехов воина

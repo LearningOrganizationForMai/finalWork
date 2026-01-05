@@ -1,5 +1,5 @@
 from game_system import game
 
 
-game()
+game() # Запуск самой игры
 

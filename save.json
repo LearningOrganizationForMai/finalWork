@@ -4,7 +4,7 @@
       {
         "className": "Warrior",
         "name": "Aragorn",
-        "HP": 130,
+        "HP": 170,
         "MP": 0,
         "strength": 56,
         "dexterity": 40,
@@ -19,7 +19,7 @@
       {
         "className": "Archer",
         "name": "Legolas",
-        "HP": 71,
+        "HP": 182,
         "MP": 0,
         "strength": 10,
         "dexterity": 50,
@@ -29,13 +29,15 @@
           "weaponClass": "bows"
         },
         "armor": "leather",
-        "artifacts": []
+        "artifacts": [
+          "railgun"
+        ]
       },
       {
         "className": "Mage",
         "name": "Abaddon",
-        "HP": 144,
-        "MP": 140,
+        "HP": 200,
+        "MP": 20,
         "strength": 10,
         "dexterity": 35,
         "intelligence": 50,
@@ -44,16 +46,13 @@
           "weaponClass": "staffs"
         },
         "armor": "robe",
-        "artifacts": [
-          "balalaika",
-          "vodka"
-        ]
+        "artifacts": []
       },
       {
         "className": "Healer",
         "name": "Chen",
-        "HP": 159,
-        "MP": 20,
+        "HP": 200,
+        "MP": 140,
         "strength": 10,
         "dexterity": 30,
         "intelligence": 0,
@@ -63,13 +62,12 @@
         },
         "armor": "chainmail",
         "artifacts": [
-          "maneki-neko",
-          "dakimakura"
+          "kigurumi"
         ]
       }
     ],
-    "stage": 1,
-    "previousLocation": "piramids"
+    "stage": 2,
+    "previousLocation": "forest"
   },
   "2": {
     "party": [
@@ -278,5 +276,219 @@
     ],
     "stage": 1,
     "previousLocation": "forest"
+  },
+  "5": {
+    "party": [
+      {
+        "className": "Warrior",
+        "name": "Aragorn",
+        "HP": 90,
+        "MP": 0,
+        "strength": 56,
+        "dexterity": 40,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "exscalibur",
+          "weaponClass": "swords"
+        },
+        "armor": "fullplate",
+        "artifacts": [
+          "steel underwear"
+        ]
+      },
+      {
+        "className": "Archer",
+        "name": "Legolas",
+        "HP": 140,
+        "MP": 0,
+        "strength": 10,
+        "dexterity": 50,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "galadhrim",
+          "weaponClass": "bows"
+        },
+        "armor": "leather",
+        "artifacts": []
+      },
+      {
+        "className": "Mage",
+        "name": "Abaddon",
+        "HP": 104,
+        "MP": 140,
+        "strength": 10,
+        "dexterity": 35,
+        "intelligence": 50,
+        "weapon": {
+          "weaponName": "mysticStaff",
+          "weaponClass": "staffs"
+        },
+        "armor": "robe",
+        "artifacts": [
+          "medved",
+          "vodka"
+        ]
+      },
+      {
+        "className": "Healer",
+        "name": "Chen",
+        "HP": 35,
+        "MP": 140,
+        "strength": 10,
+        "dexterity": 30,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "staffOfWizardry",
+          "weaponClass": "staffs"
+        },
+        "armor": "chainmail",
+        "artifacts": [
+          "dakimakura"
+        ]
+      }
+    ],
+    "stage": 1,
+    "previousLocation": "haunted village"
+  },
+  "6": {
+    "party": [
+      {
+        "className": "Warrior",
+        "name": "Aragorn",
+        "HP": 200,
+        "MP": 0,
+        "strength": 56,
+        "dexterity": 40,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "exscalibur",
+          "weaponClass": "swords"
+        },
+        "armor": "fullplate",
+        "artifacts": []
+      },
+      {
+        "className": "Archer",
+        "name": "Legolas",
+        "HP": 200,
+        "MP": 0,
+        "strength": 10,
+        "dexterity": 50,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "galadhrim",
+          "weaponClass": "bows"
+        },
+        "armor": "leather",
+        "artifacts": []
+      },
+      {
+        "className": "Mage",
+        "name": "Abaddon",
+        "HP": 152,
+        "MP": 80,
+        "strength": 10,
+        "dexterity": 35,
+        "intelligence": 50,
+        "weapon": {
+          "weaponName": "mysticStaff",
+          "weaponClass": "staffs"
+        },
+        "armor": "robe",
+        "artifacts": [
+          "vodka"
+        ]
+      },
+      {
+        "className": "Healer",
+        "name": "Chen",
+        "HP": 200,
+        "MP": 260,
+        "strength": 10,
+        "dexterity": 30,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "staffOfWizardry",
+          "weaponClass": "staffs"
+        },
+        "armor": "chainmail",
+        "artifacts": []
+      }
+    ],
+    "stage": 1,
+    "previousLocation": "piramids"
+  },
+  "7": {
+    "party": [
+      {
+        "className": "Warrior",
+        "name": "Aragorn",
+        "HP": 120,
+        "MP": 0,
+        "strength": 56,
+        "dexterity": 40,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "exscalibur",
+          "weaponClass": "swords"
+        },
+        "armor": "fullplate",
+        "artifacts": [
+          "borat Mankini",
+          "thongs of virtue"
+        ]
+      },
+      {
+        "className": "Archer",
+        "name": "Legolas",
+        "HP": 114,
+        "MP": 0,
+        "strength": 10,
+        "dexterity": 50,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "galadhrim",
+          "weaponClass": "bows"
+        },
+        "armor": "leather",
+        "artifacts": [
+          "rocktlauncher"
+        ]
+      },
+      {
+        "className": "Mage",
+        "name": "Abaddon",
+        "HP": 152,
+        "MP": 20,
+        "strength": 10,
+        "dexterity": 35,
+        "intelligence": 50,
+        "weapon": {
+          "weaponName": "mysticStaff",
+          "weaponClass": "staffs"
+        },
+        "armor": "robe",
+        "artifacts": []
+      },
+      {
+        "className": "Healer",
+        "name": "Chen",
+        "HP": 118,
+        "MP": 140,
+        "strength": 10,
+        "dexterity": 30,
+        "intelligence": 0,
+        "weapon": {
+          "weaponName": "staffOfWizardry",
+          "weaponClass": "staffs"
+        },
+        "armor": "chainmail",
+        "artifacts": [
+          "dakimakura"
+        ]
+      }
+    ],
+    "stage": 1,
+    "previousLocation": "haunted village"
   }
 }

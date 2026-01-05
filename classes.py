@@ -66,8 +66,8 @@ class Mage(Character):
     ) -> None:
         super().__init__(name, weapon, armor, characteristics)
         self.className: str = "Mage"
-        self.mageSpells: Dict[str, MageSpell] = spells.mageSpells
-        self.abilities: Dict[str, Any] = abilities.mageAbilities
+        self.mageSpells: dict[str, MageSpell] = spells.mageSpells
+        self.abilities: dict[str, Any] = abilities.mageAbilities
 
     def castSpell(self, target: Character, spell: MageSpell) -> None:
         """
@@ -87,15 +87,15 @@ class Mage(Character):
           Иначе — самое дешёвое
           Если MP не хватает даже на дешёвое — медитирует
         """
-        if not self.isAlive:
+        if not(self.isAlive):
             print(f'{self.name} не может продолжать бой')
             return 0
         if len(targets) == 0:
             print("Все противники уже мертвы")
-            return None
+            return 
 
         target = random.choice(targets)
-        if not target.isAlive:
+        if not(target.isAlive):
             print(f'{target.name} уже мертв, {self.name} не любит пинать труп')
             return 0
 
@@ -127,8 +127,8 @@ class Healer(Mage):
     ) -> None:
         super().__init__(name, weapon, armor, characteristics)
         self.className: str = "Healer"
-        self.mageSpells: Dict[str, HealSpell] = spells.healSpells
-        self.abilities: Dict[str, Any] = abilities.healerAbilities
+        self.mageSpells: dict[str, HealSpell] = spells.healSpells
+        self.abilities: dict[str, Any] = abilities.healerAbilities
 
     def castSpell(self, target: Character, spell: HealSpell) -> None:
         """

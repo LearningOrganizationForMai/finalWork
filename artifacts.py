@@ -24,10 +24,10 @@ class Artifacts:
         healer (Dict[str, Artifact]): Артефакты для целителя
     """
     def __init__(self) -> None:
-        self.warrior: Dict[str, Artifact] = {}
-        self.archer: Dict[str, Artifact] = {}
-        self.mage: Dict[str, Artifact] = {}
-        self.healer: Dict[str, Artifact] = {}
+        self.warrior: dict[str, Artifact] = {}
+        self.archer: dict[str, Artifact] = {}
+        self.mage: dict[str, Artifact] = {}
+        self.healer: dict[str, Artifact] = {}
 
     def addWarriorArtifact(self, artifact: Artifact) -> None:
         # Добавляет артефакт в коллекцию артефактов воина
@@ -59,7 +59,6 @@ class Artifacts:
             for art in getattr(self, className).values():
                 if art.artifactName == artName:
                     return art
-        return None
 
     def showAllArtifacts(self) -> List[Dict[str, str]]:
         # Возвращает список всех артефактов в виде словарей с полями 'artifactName' и 'className'
@@ -100,7 +99,7 @@ healerArtifact = {
 }
 
 
-# Создание реестра артефактов и регистрация всех предметов.
+# Создание реестра артефактов и регистрация всех предметов
 artifacts = Artifacts()
 
 for artifact in warriorArtifacts.values():

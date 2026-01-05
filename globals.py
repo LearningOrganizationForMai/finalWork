@@ -1,6 +1,6 @@
 from classes import Archer, Healer, Mage, Warrior
 
-
+# Создаем глобальные переменные, которые будут нужны, чтобы можно было использовать их из любых функций
 USER = None
 SAVE_FILE = 'save.json'
 USERS_FILE = 'users.json'

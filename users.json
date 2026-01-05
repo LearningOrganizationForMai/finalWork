@@ -30,5 +30,29 @@
             "salt": "2d8a9c18893105ed5de60cdc0aa4d71c",
             "hash": "30d2df56639b181ef4f4b46de09017e2349c52f71c7abd51e48db21c18956fff"
         }
+    },
+    "R": {
+        "id": 5,
+        "login": "R",
+        "password": {
+            "salt": "07bef7944dd794eeb505d1165ef62978",
+            "hash": "4371147bf105c4b0f99f9ccbf94fc3aedd153dc73bb37d7b8f682a8ffb2cda49"
+        }
+    },
+    "Рома": {
+        "id": 6,
+        "login": "Рома",
+        "password": {
+            "salt": "a7eb519ed54ddf198b1347d20b4cf25e",
+            "hash": "c79bde481eab67571177847249b8ab5ebde4b1790861f1551c12f9876510ab37"
+        }
+    },
+    "Rom": {
+        "id": 7,
+        "login": "Rom",
+        "password": {
+            "salt": "ff5c87e3a026ecbaba87e9197730cee0",
+            "hash": "89a2b2dde895d5f4c837a4865887e0e2795fcb02cb0894deab54d6bd24b2ef2d"
+        }
     }
 }

@@ -22,7 +22,7 @@ def round(start: int, party: List[Any], loadData: Dict[str, Any]) -> str:
     """
     for globals.STAGE in range(start, globals.STAGE_LIMIT + 1):
         # Получаем три случайные локации
-        loc: Dict[str, Any] = locations.getLocations()
+        loc: dict[str, Any] = locations.getLocations()
         keys: List[str] = list(loc.keys())
         # Игрок выбирает одну из трёх локаций
         chooseLoc: int = int(input(f"""Перед вами открываются 3 дороги. 
@@ -51,7 +51,7 @@ def round(start: int, party: List[Any], loadData: Dict[str, Any]) -> str:
         party = [character for character in party if character.isAlive]
 
         # Сохранение прогресса
-        saveData: Dict[str, Any] = create_save_data(party, locations.previousLocation, loadData)
+        saveData: dict[str, Any] = create_save_data(party, locations.previousLocation, loadData)
         save_save(saveData)
         print("Данные сохранены")
 
@@ -68,7 +68,7 @@ def round(start: int, party: List[Any], loadData: Dict[str, Any]) -> str:
     foes = [bigBoss]
     globals.STAGE = 1  # Сброс этапа после победы
     partyState: str = battle(party, foes)
-    party[:] = [character for character in party if character.isAlive]
+    party = [character for character in party if character.isAlive]
     saveData = create_save_data(party, locations.previousLocation, loadData)
     save_save(saveData)
     print("Данные сохранены")
@@ -80,11 +80,11 @@ def round(start: int, party: List[Any], loadData: Dict[str, Any]) -> str:
 def game() -> None:
     # Точка входа в игру: аутентификация, загрузка или начало новой игры
     # Аутентификация пользователя
-    while globals.USER is None:
+    while globals.USER == None:
         auth()
 
     # Загрузка сохранённых данных
-    loadData: Dict[str, Any] = load_save()
+    loadData: dict[str, Any] = load_save()
     loadedPreviousLocation: Optional[str] = None
 
     if str(globals.USER) in loadData and len(loadData[str(globals.USER)]["party"]) > 0:
@@ -129,12 +129,10 @@ def battle(party: List[Any], foes: List[Any]) -> str:
     """
     battlers: List[Any] = party + foes
     # Сортировка по ловкости в порядке убывания
-    queue: List[Any] = sorted(battlers, key=lambda person: person.dexterity, reverse=True)
+    queue: List[Any] = sorted(battlers, key=lambda person: person.dexterity)[::-1]
 
     while len(party) > 0 and len(foes) > 0:
         for person in queue:
-            if not person.isAlive:
-                continue
             # Персонажи атакуют врагов, а Healer лечат отряд
             if person.className in ("Warrior", "Archer", "Mage"):
                 person.makeMove(foes)
@@ -148,24 +146,19 @@ def battle(party: List[Any], foes: List[Any]) -> str:
             # Если состав боя изменился — пересчитываем очередь
             if len(party) + len(foes) != len(queue):
                 battlers = party + foes
-                queue = sorted(battlers, key=lambda p: p.dexterity, reverse=True)
-                break  # завершаем текущий раунд, начинаем новый с обновлённой очередью
+                queue = sorted(battlers, key=lambda p: p.dexterity)[::-1]
 
         # Формирование отчёта о состоянии боя
-        if party:
-            partyState: str = "\n".join(f"{character.name} имеет {character.HP} HP, {character.MP} MP" for character in party)
-        else:
-            partyState = "К сожалению все погибли"
-
-        if foes:
-            foeState: str = "\n".join(f"{foe.name} имеет {foe.HP} HP" for foe in foes)
-        else:
+        partyState = "\n".join(f"{character.name} имеет {character.HP} HP, {character.MP} MP" for character in party)
+        foeState = "\n".join(f"{foe.name} имеет {foe.HP} HP" for foe in foes)
+        if len(foeState) == 0:
             foeState = "Все мертвы"
-
+        if len(party) == 0:
+            partyState = "К сожалению все погибли"
         print(f"На данный момент состояние персонажей: {partyState}")
         print(f"На данный момент состояние противников: {foeState}")
         print('Нажмите enter, чтобы сделать следующий ход')
-        input()
+        input() 
 
     # Выпадение артефакта после победы
     partyArtifacts: List[str] = []

@@ -130,13 +130,12 @@ class Character:
 
     def loadArtifacts(self, arts: List[str]) -> None:
         """
-        Загружает артефакты по их названиям из глобального реестра 'artifacts'.
-        Использует имя класса персонажа (в нижнем регистре) для определения категории.
+        Загружает артефакты по их названиям из глобального реестра 'artifacts'
+        Использует имя класса персонажа (в нижнем регистре) для определения категории
         """
         for art in arts:
             # Динамически получаем словарь артефактов для класса персонажа
-            artifact_obj = getattr(artifacts, self.className.lower())[art]
-            self.artifacts.append(artifact_obj)
+            self.artifacts.append(getattr(artifacts, self.className.lower())[art])
 
     def getSaveData(self) -> Dict[str, Any]:
         # Возвращает данные персонажа в виде словаря для сохранения 
